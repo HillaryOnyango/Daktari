@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import { NavLink, useNavigate } from "react-router-dom";
+import profilePic from "./assets/profile_pic.png";
+import dropdownIcon from "./assets/dropdown_icon.svg";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -27,11 +29,12 @@ const Navbar = () => {
           <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
         </NavLink>
       </ul>
-      <div className="flex items-center gap-4">
+
+      <div className="flex items-center gap-2 cursor-pointer group-relative">
         {token ? (
           <div>
-            <img src={assets.profile_pic} alt="" />
-            <img src={assets.dropdown_icon} alt="" />
+            <img className="w-8 rounded-full" src={profilePic} alt="Profile" />
+            <img className="w-2.5" src={dropdownIcon} alt="Dropdown" />
           </div>
         ) : (
           <button
