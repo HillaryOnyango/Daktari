@@ -29,12 +29,18 @@ const Navbar = () => {
           <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
         </NavLink>
       </ul>
-
       <div className="flex items-center gap-2 cursor-pointer group-relative">
         {token ? (
           <div>
             <img className="w-8 rounded-full" src={profilePic} alt="Profile" />
             <img className="w-2.5" src={dropdownIcon} alt="Dropdown" />
+            <div className="absolute top-0 right-0 pt-14 text-base font-medium text-grey-600 z-20 hidden group-hover:block">
+              <div>
+                <p>My Profile</p>
+                <p>My Appointments</p>
+                <p>LogOut</p>
+              </div>
+            </div>
           </div>
         ) : (
           <button
